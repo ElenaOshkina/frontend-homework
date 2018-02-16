@@ -10,12 +10,10 @@ function get(obj, path){
     let tempObj = obj;
     
     arr.forEach( (subpath) => {
-        console.log(tempObj);
-        if(tempObj != undefined && tempObj.hasOwnProperty(subpath)) {
+        if(tempObj !== undefined && tempObj.hasOwnProperty(subpath)) {
             tempObj = tempObj[subpath];
         } else {
             tempObj = undefined;
-            return undefined;
         }
     });
 
